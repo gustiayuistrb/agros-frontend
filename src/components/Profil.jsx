@@ -17,7 +17,7 @@ function Profil() {
 
   useEffect(() => {
     const fetchUserData = async () => {
-      const response = await fetch("http://localhost:5000/api/users/profile", {
+      const response = await fetch("https://agros-backend.vercel.app/api/users/profile", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -84,7 +84,7 @@ function Profil() {
     delete formData.email;
   
     const response = await fetch(
-      `http://localhost:5000/api/users/update/${userId}`, 
+      `https://agros-backend.vercel.app/api/users/update/${userId}`, 
       {
         method: "PUT",
         headers: {
