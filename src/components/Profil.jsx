@@ -17,7 +17,8 @@ function Profil() {
 
   useEffect(() => {
     const fetchUserData = async () => {
-      const response = await fetch("http://agrosapp.my.id/api/users/profile", {
+      const response = await fetch("http://localhost:5000/api/users/profile", {
+      // const response = await fetch("http://agrosapp.my.id/api/users/profile", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -84,7 +85,8 @@ function Profil() {
     delete formData.email;
   
     const response = await fetch(
-      `http://agrosapp.my.id/api/users/update/${userId}`, 
+      `http://localhost:5000/api/users/update/${userId}`, 
+      // `http://agrosapp.my.id/api/users/update/${userId}`, 
       {
         method: "PUT",
         headers: {
