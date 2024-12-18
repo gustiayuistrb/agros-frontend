@@ -8,7 +8,7 @@ function PartnerSection() {
 
   useEffect(() => {
     const fetchUsers = async () => {
-      const response = await fetch('https://agros-backend.vercel.app/api/users', {
+      const response = await fetch('http://agrosapp.my.id/api/users', {
         method: 'GET',
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -37,7 +37,7 @@ function PartnerSection() {
 
     if (result.isConfirmed) {
       const response = await fetch(
-        `https://agros-backend.vercel.app/api/users/delete/${userId}`,
+        `http://agrosapp.my.id/api/users/delete/${userId}`,
         {
           method: 'DELETE',
           headers: {

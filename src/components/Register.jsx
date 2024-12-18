@@ -77,7 +77,7 @@ function Register() {
     }
 
     try {
-      const response = await axios.post('https://agros-backend.vercel.app/api/auth/register', formData);
+      const response = await axios.post('http://agrosapp.my.id/api/auth/register', formData);
 
       Swal.fire({
         icon: 'success',
